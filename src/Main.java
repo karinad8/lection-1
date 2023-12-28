@@ -4,16 +4,23 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        // объявить число с клавиатуры
+        // задание : найти сумму цифр ab + cd числа abcd
+
+        // отсканироват число
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number : ");
         int number = scanner.nextInt();
-        // конвертитровать число в строку
+        //перевести в строку
         String numberStr = String.valueOf(number);
-        // взять из этой строки последнее число
-        int numberStrLenght = numberStr.length();
-        String lastNr = numberStr.substring( numberStrLenght - 1);
-        // вывести число
-        System.out.println("Last digit : " + lastNr);
+        //отрезать первую половину строки, потом отрезать вторую часть строки
+        String fpart  = numberStr.substring(0, 2 );
+        String spart  = numberStr.substring(2);
+        // перевести их  обратно в числа int
+        int fhalfInt = Integer.parseInt(fpart);
+        int shalfInt = Integer.parseInt(spart);
+        // сложить
+        int x = fhalfInt + shalfInt;
+        // вывести
+        System.out.println("Sum is " + x );
     }
 }
