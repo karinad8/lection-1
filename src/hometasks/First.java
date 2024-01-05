@@ -9,7 +9,7 @@ public class First {
         System.out.println("Enter the number of subjects : ");
         int numberOfSub = scanner.nextInt();
         int sum = 0;
-        for ( int i = 0; i < numberOfSub; i++) {
+        for (int i = 0; i < numberOfSub; i++) {
             System.out.println("Enter the mark : " + (i + 1));
             int mark = scanner.nextInt();
             if (mark < 11) {
@@ -24,8 +24,5 @@ public class First {
         double averageDouble = (double) sum / numberOfSub;
         System.out.println("Average is" + " " + averageDouble);
 
-        }
     }
-
-
-
+}
