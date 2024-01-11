@@ -4,9 +4,9 @@ public class Mainone {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number =  scanner.nextInt();
-        printSumAndMultiplicat(number);
+        printSumAndMultiplication(number);
     }
-        public static void printSumAndMultiplicat(int number) {
+        public static void printSumAndMultiplication(int number) {
             int currentLastDigit = 0;
             int currentNumber = number;
             int sum = 0;
