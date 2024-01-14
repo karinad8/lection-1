@@ -5,10 +5,12 @@ public class Main {
         System.out.println("Enter the coefficients of the quadratic equation (a, b, c) : ");
         getDiscriminantAndRoots(scanNumber(), scanNumber(), scanNumber());
     }
+
     public static int scanNumber() {
         Scanner scanner = new Scanner(System.in);
         return (int) scanner.nextDouble();
     }
+
     public static void getDiscriminantAndRoots(double a, double b, double c) {
         double number = Math.pow(b, 2) - 4 * a * c; // number = D;
         if (number > 0) {
