@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Enter the coefficients of the quadratic equation (a, b, c) : ");
-        getDiscriminantAndRoots(scanNumber(), scanNumber(), scanNumber());
+        printEquationRoots(scanNumber(), scanNumber(), scanNumber());
     }
 
-    public static int scanNumber() {
+    public static double scanNumber() {
         Scanner scanner = new Scanner(System.in);
-        return (int) scanner.nextDouble();
+        return scanner.nextDouble();
     }
 
-    public static void getDiscriminantAndRoots(double a, double b, double c) {
+    public static void printEquationRoots(double a, double b, double c) {
         double number = Math.pow(b, 2) - 4 * a * c; // number = D;
         if (number > 0) {
             double firstX = ((-b) + Math.sqrt(number)) / 2 * a;

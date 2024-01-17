@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class Hours {
     public static void main(String[] args) {
-        // надо создавать другую функцию, если код маленький ?
         Random random = new Random();
         int seconds = random.nextInt(28801);
         System.out.println(seconds);
