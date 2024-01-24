@@ -7,7 +7,9 @@ public class Phone {
         System.out.println("Phone:" + "\n" + "number: " + number + "\n" + "model: " + model + "\n" + "weight: " + weight);
     }
 
-    public void receiveCall(String name) { System.out.println(name + " calls"); }
+    public void receiveCall(String name) {
+        System.out.println(name + " calls");
+    }
 
     public void getNumber() {
         System.out.println(number);
@@ -23,7 +25,7 @@ public class Phone {
     }
 
 
-    public void sendMessage(long number1,long number2) {
+    public void sendMessage(long number1, long number2) {
         System.out.println("Do you want to send a massage to " + number1 + ", " + number2 + " " + "?");
     }
 
