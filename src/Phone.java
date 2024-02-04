@@ -1,17 +1,22 @@
 public class Phone {
     private long number;
-    private String model;
+    private java.lang.String model;
     private double weight;
 
-    public void printInfo(long number, String model, double weight) {
+    public Phone(long number, java.lang.String model, double weight) {
+        this.number = number;
+        this.model = model;
+        this.weight = weight;
+    }
+    public void printInfo() {
         System.out.println("Phone:" + "\n" + "number: " + number + "\n" + "model: " + model + "\n" + "weight: " + weight);
     }
 
-    public void receiveCall(String name) {
+    public void receiveCall(java.lang.String name) {
         System.out.println(name + " calls");
     }
 
-    public void getNumber() {
+    public void printNumber() {
         System.out.println(number);
     }
 
@@ -20,7 +25,7 @@ public class Phone {
     }
 
 
-    public void receiveCall(String name, long number) {
+    public void receiveCall(java.lang.String name, long number) {
         System.out.println(name + "\n" + number);
     }
 
