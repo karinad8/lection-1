@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class MainAirline {
     public static void main(String[] args) {
         AirlineOne helicopter = new AirlineOne(5685, 56769, "white", "helicopter", 2000, 4565768);
@@ -8,12 +10,9 @@ public class MainAirline {
         flightFacility.addCapacity(plane);
         flightFacility.addCapacity(quadcopter);
         System.out.println("Total capacity = " + flightFacility.getTotalCapacity());
-        flightFacility.addLoadCapacity(helicopter);
-        flightFacility.addLoadCapacity(plane);
-        flightFacility.addLoadCapacity(quadcopter);
-        System.out.println("Total load capacity = " + flightFacility.getTotalLoadCapacity());
         flightFacility.addFlightRange(helicopter);
         flightFacility.addFlightRange(plane);
         flightFacility.addFlightRange(quadcopter);
+
     }
 }

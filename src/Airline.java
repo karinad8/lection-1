@@ -1,15 +1,11 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.ToLongFunction;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Airline {
     private List<AirlineOne> capacityList = new ArrayList<>();
-    private List<AirlineOne> loadCapacityList = new ArrayList<>();
-    private List<Double> flightRangeList = new ArrayList<>();
-
-    public void addLoadCapacity(AirlineOne newCapacity) {
-        loadCapacityList.add(newCapacity);
-    }
+    private List<Double> flightRangeList = Arrays.asList(2357.678, 4576.876, 6587.87);
 
     public void addCapacity(AirlineOne newCapacity) {
         capacityList.add(newCapacity);
@@ -27,21 +23,11 @@ public class Airline {
         }
         return totalCapacity;
     }
+    public List<Double> sortedFlightRange = flightRangeList.stream()
+            .sorted((s1,s2)->s2.compareTo(s1))
+            .toList();
 
-    public double getTotalLoadCapacity() {
-        double totalLoadCapacity = 0;
-        for (AirlineOne loadCapacity : loadCapacityList) {
-            totalLoadCapacity += loadCapacity.getLoadCapacity();
-        }
-        return totalLoadCapacity;
     }
 
 
-    public void sortBasedOnFlightRange() {
-        Collections.sort(flightRangeList);
-        for (Double element : flightRangeList) {
-            System.out.println(element + "\t");
-        }
-    }
-}
 
