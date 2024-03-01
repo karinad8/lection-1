@@ -1,3 +1,5 @@
+package airline;
+
 public class AirlineOne {
     private double capacity;
     private double loadCapacity;

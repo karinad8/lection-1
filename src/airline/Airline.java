@@ -1,3 +1,5 @@
+package airline;
+
 import java.util.*;
 import java.util.function.ToLongFunction;
 import java.util.stream.Collectors;

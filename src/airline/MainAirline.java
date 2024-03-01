@@ -1,4 +1,4 @@
-import java.util.List;
+package airline;
 
 public class MainAirline {
     public static void main(String[] args) {
