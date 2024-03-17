@@ -11,7 +11,7 @@ public class Main {
     }
 
     public static void squareAndPrintTheNumbers(List<Integer> numbers) throws ExecutionException, InterruptedException {
-        List<Integer> NumbersSquared = new ArrayList<>();
+        List<Integer> numbersSquared = new ArrayList<>();
         List<CompletableFuture<Integer>> completableFutureList = new ArrayList<>();
 
         for (int el : numbers) {
@@ -20,9 +20,9 @@ public class Main {
 
         }
         for (CompletableFuture<Integer> future : completableFutureList) {
-            NumbersSquared.add(future.get());
+            numbersSquared.add(future.get());
 
         }
-        System.out.println("Numbers squared : " + NumbersSquared);
+        System.out.println("Numbers squared : " + numbersSquared);
     }
 }
