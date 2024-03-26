@@ -13,18 +13,22 @@ public class Main {
         for (int i = 0; i < length; i++) {
             array[i] = scanner.nextInt();
         }
-        System.out.println(Arrays.toString(array));
-        CustomThread thread1 = new CustomThread(array);
-        thread1.start();
-        CustomThread thread2 = new CustomThread(array);
-        thread2.start();
+
+        Maximum max = new Maximum();
+        Thread threadMax = new Thread(max);
+
+        Minimum min = new Minimum();
+        Thread threadMin = new Thread(min);
+
+        threadMax.start();
+        threadMin.start();
         try {
-            thread1.join();
-            thread2.join();
+            threadMax.join();
+            threadMin.join();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Max is " + thread1.getMax());
-        System.out.println("Min is " + thread1.getMin());
+        System.out.println("Max is " + max.maximum(array));
+        System.out.println("Min is " + min.minimum(array));
     }
 }
